@@ -1,0 +1,122 @@
+\documentclass[10pt,letterpaper]{article}
+
+% ---------- PACKAGES ----------
+\usepackage[margin=0.5in,top=0.3in,bottom=0.3in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Standard sans-serif font family for superior ATS readability (Helvetica/Arial substitute)
+%\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{carlito}
+\renewcommand{\familydefault}{\sfdefault}
+
+% ---------- COLORS ----------
+\definecolor{primary}{RGB}{30, 41, 59}     % Slate Dark
+\definecolor{accent}{RGB}{0, 86, 179}       % Accessible Blue for Links & Headers
+\definecolor{darkgray}{RGB}{60, 60, 60}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\pdfgentounicode=1 % Ensures copy-pasted / parsed text is Unicode-clean
+
+% ---------- HYPERREF CONFIG ----------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    filecolor=accent,      
+    urlcolor=accent,
+    pdfpagemode=UseNone
+}
+
+% ---------- SECTION FORMAT ----------
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}[\vspace{3pt}\titlerule\vspace{2pt}]
+\titlespacing{\section}{0pt}{7pt}{3pt}
+
+\newcommand{\resumeItem}[1]{\item #1}
+
+\newenvironment{resumeItemize}{
+  \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=1pt, parsep=0pt, label=\textbullet]
+}{
+  \end{itemize}
+}
+
+\setlength{\parskip}{0pt}
+\renewcommand{\baselinestretch}{0.97}
+
+\newcommand{\resumeEntry}[4]{
+  \textbf{#1} \hfill \textbf{#2} \\
+  \textit{#3} \hfill \textit{#4} \\[1pt]
+}
+
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+  {\Huge \textbf{\color{primary} Aymen Sadraoui, Ph.D.}}\\[4pt]
+  {\large \textbf{Data Scientist \& Data Engineer}} \quad $|$ \quad {\small Machine Learning, Clinical AI \& Big Data Systems}\\[5pt]
+  \small
+  Paris, France \quad $\cdot$ \quad
+  \href{mailto:aymensadraoui1919@gmail.com}{\underline{aymensadraoui1919@gmail.com}}
+  \quad $\cdot$ \quad
+  +33 7 65 68 52 67
+  \quad $\cdot$ \quad
+  \href{https://aymensadraoui.github.io/}{\underline{Portfolio}}
+  \quad $\cdot$ \quad
+  \href{https://www.linkedin.com/in/aymen-sadraoui-abb571288}{\underline{LinkedIn}}
+\end{center}
+
+\vspace{-1pt}
+
+% ---------- SUMMARY ----------
+\section*{Professional Summary}
+I am a \textbf{Data Scientist} and \textbf{Machine Learning Ph.D.} graduate specialized in building robust \textbf{predictive models} and scalable \textbf{data engineering pipelines} for high-dimensional, multimodal datasets. I bring extensive hands-on expertise in \textbf{deep learning}, \textbf{representation learning}, and \textbf{few-shot learning}, maintaining a rigorous evaluation-first methodology focused on \textbf{model calibration}, \textbf{out-of-distribution generalization}, and reproducibility. Proven track record of translating complex mathematical research into first-author publications at top-tier venues (\textbf{CVPR}, \textbf{ISBI}, \textbf{ICIP}) and engineering production-grade \textbf{ETL pipelines} for clinical AI systems. I am seeking roles where I can architect end-to-end \textbf{data pipelines} and deploy scalable, impact-driven \textbf{AI/ML solutions}.
+
+% ---------- EXPERIENCE ----------
+\input{experiences.tex}
+
+% ---------- SKILLS ----------
+\section*{Technical Skills}
+\begin{description}[leftmargin=0pt, labelindent=0pt, itemsep=2pt, parsep=0pt]
+  \item[\textbf{Languages \& Core Tech:}] Python, SQL, Bash/Linux, Git, CI/CD
+  \item[\textbf{Data Engineering \& Infrastructure:}] Docker, Kubernetes, Optuna, ETL/ELT Pipelines, Data Modeling
+  \item[\textbf{Machine Learning \& Deep Learning:}] PyTorch, Scikit-learn, OpenCV, OpenSlide, Multimodal Modeling, Representation Learning, Few-Shot Learning, Convex Optimization, Computer Vision, NLP
+  \item[\textbf{MLOps \& Model Deployment:}] Model Calibration, Robustness \& Stress Testing, Out-of-Distribution Generalization, MLflow, FastAPI, Docker, Experiment Tracking, Data Drift Detection
+
+  \item[\textbf{Languages:}] English (Fluent), French (Fluent), Arabic (Native)
+\end{description}
+
+% ---------- ACHIEVEMENTS ----------
+\section*{Achievements}
+\begin{resumeItemize}
+  \resumeItem{\textbf{1st Place Winner}: Lung Transplant Rejection Challenge -- Organized by Hôpital Foch \& Health Data Hub (2024)}
+  \resumeItem{\textbf{National Rank 63 / 1,773 (Top 3\%)}: National Engineering Entrance Exam, Tunisia (2018)}
+\end{resumeItemize}
+
+% ---------- EDUCATION ----------
+\section*{Education}
+\resumeEntry{Ph.D. in Machine Learning \& Artificial Intelligence}{Jan 2022 -- Jan 2026}{CentraleSupélec, Université Paris-Saclay}{Gif-sur-Yvette, France}
+
+\resumeEntry{Engineering Degree in Applied Mathematics \& Computer Science}{2018 -- 2021}{École Polytechnique de Tunisie}{La Marsa, Tunisia}
+
+\resumeEntry{Preparatory Classes (Mathematics \& Physics)}{2016 -- 2018}{Preparatory Institute for Engineering Studies}{Bizerte, Tunisia}
+
+% ---------- PUBLICATIONS ----------
+\section*{Publications}
+\begin{resumeItemize}
+  \resumeItem{\textbf{Sadraoui, A.}, \textit{et al.} (2026). A Proximal Approach for Stain Separation and Normalization of Whole-Slide Histopathological Images. \textit{IEEE 23rd International Symposium on Biomedical Imaging (ISBI)}.}
+
+  \resumeItem{\textbf{Sadraoui, A.}, \textit{et al.} (2025). UNEM: UNrolled Generalized EM for Transductive Few-Shot Learning. \textit{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}.}
+
+  \resumeItem{\textbf{Sadraoui, A.}, \textit{et al.} (2024). Deep Learning Classification and Quantification of Pejorative and Nonpejorative Architectures in Resected Hepatocellular Carcinoma from Digital Histopathologic Images. \textit{The American Journal of Pathology}}
+
+  \resumeItem{\textbf{Sadraoui, A.}, \textit{et al.} (2024). Unrolled Projected Gradient Algorithm for Stain Separation in Digital Histopathological Images. \textit{IEEE International Conference on Image Processing (ICIP)}}
+
+  \resumeItem{\textbf{Sadraoui, A.}, \textit{et al.} (2024). A Transductive Few-Shot Learning Approach for Classification of Digital Histopathological Slides from Liver Cancer. \textit{IEEE International Symposium on Biomedical Imaging (ISBI)}}
+\end{resumeItemize}
+
+\end{document}
